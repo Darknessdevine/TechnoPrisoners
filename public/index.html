@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Music Tutorials Hub</title>
+    <link rel="stylesheet" href="/styles.css" />
+  </head>
+  <body>
+    <header>
+      <h1>🎵 Music Tutorials Hub</h1>
+      <div id="user-bar"></div>
+    </header>
+
+    <main>
+      <section class="card">
+        <h2>Get Started</h2>
+        <p>Browse free tutorials instantly. Sign in to unlock your personalized dashboard and premium access.</p>
+
+        <div class="forms-grid">
+          <form id="register-form">
+            <h3>Register</h3>
+            <input name="name" placeholder="Full name" required />
+            <input name="email" type="email" placeholder="Email" required />
+            <input name="password" type="password" placeholder="Password" required />
+            <button type="submit">Create Account</button>
+          </form>
+
+          <form id="login-form">
+            <h3>Login</h3>
+            <input name="email" type="email" placeholder="Email" required />
+            <input name="password" type="password" placeholder="Password" required />
+            <button type="submit">Sign In</button>
+            <p class="hint">Admin demo: <code>admin@musicplatform.com</code> / <code>admin123</code></p>
+          </form>
+        </div>
+      </section>
+
+      <section id="subscription-card" class="card hidden">
+        <h2>Unlock Premium Tutorials</h2>
+        <p>Upgrade to access detailed breakdowns, advanced techniques, and complete song arrangements.</p>
+        <button id="subscribe-btn">Activate Premium (Demo)</button>
+      </section>
+
+      <section class="card">
+        <h2>Video Library</h2>
+        <div id="videos" class="videos-grid"></div>
+      </section>
+
+      <section id="admin-card" class="card hidden">
+        <h2>Content Management</h2>
+        <form id="video-form">
+          <input type="hidden" name="id" />
+          <input name="title" placeholder="Video title" required />
+          <input name="videoUrl" placeholder="Embed URL (e.g. YouTube embed link)" required />
+          <textarea name="description" placeholder="Description"></textarea>
+          <label class="inline">
+            <input name="isPremium" type="checkbox" /> Premium tutorial
+          </label>
+          <button type="submit">Save Video</button>
+          <button type="button" id="cancel-edit" class="secondary hidden">Cancel edit</button>
+        </form>
+
+        <div id="admin-list"></div>
+      </section>
+
+      <p id="message"></p>
+    </main>
+
+    <script src="/main.js"></script>
+  </body>
+</html>

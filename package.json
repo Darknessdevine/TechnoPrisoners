@@ -1,0 +1,17 @@
+{
+  "name": "techno-prisoners-music-tutorials",
+  "version": "1.0.0",
+  "description": "Music tutorial platform with authentication, paywall, and admin video management",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node server.js",
+    "test": "node --test"
+  },
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "better-sqlite3": "^9.6.0",
+    "express": "^4.19.2",
+    "express-session": "^1.18.0"
+  }
+}
